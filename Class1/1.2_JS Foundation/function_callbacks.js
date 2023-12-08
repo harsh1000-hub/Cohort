@@ -67,12 +67,15 @@ function greetSetTimeOut(){
     console.log("setTimeout this side");
 }
 // calling setTimeout  -> In setTimeout callbacks concept is used 
-setTimeout(greetSetTimeOut ,1*1000) // it take two argument first one is -> function as a argument , second one is time like (1*1000) means in JS when convert millsec into sec multiple with 1000 (1*1000) == 1 second
+setTimeout(greetSetTimeOut ,1*1000) // it take two argument first one is -> function as a argument , second one is time taken  (1*1000) means in JS when convert millsec into sec multiple with 1000 (1*1000) == 1 second
 
+// If you setTimeout(greetSetTimeOut(),1*1000)  // this means you not pass function as an argument rather pass what function return a value and in case your function return some number than setTimeout() take that number as Time
 // ----------------------------------------------------------------------------------------------------------------
 
-// setInterval() = A predefined function in which after every particular time interval excute operation
+// setInterval() = // A predefined function in which after every particular time interval excute operation
 function greetsetInterval(){
     console.log("setInterval this side");
 }
 setInterval(greetsetInterval,1*1000);
+
+
