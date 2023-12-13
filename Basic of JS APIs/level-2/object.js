@@ -24,8 +24,10 @@ function objectMethods(obj) {
     // assign() = assign another key/property to the object or merge two object
     let newObj = Object.assign({}, obj, { newProperty: "newValue" });
     console.log("After Object.assign():", newObj);
-  
-  
+    
+
+    // If you want to create a new object and assign properties to it, you can use an empty object ({}) inside Object.assign({},obj,...)
+    // And if you want to add a new properties inside similar object you don't use empty object({})
   }
   
   // Example Usage for Object Methods
@@ -36,3 +38,31 @@ function objectMethods(obj) {
   };
   
   objectMethods(sampleObject);
+
+
+
+  // =============================================================================================
+
+  // Own Program :- Creata a new object property that will reflect in each array of object
+  let usersArray = [
+    {
+      id:1,
+      fullName:"Harsh"
+    },{
+      id:2,
+      fullName:"Vaibhav"
+    }
+  ]
+  // write a callback function
+  function addNewProperty(obj){
+    Object.assign(obj,{gender:'male'})
+  }
+  
+  // Rather than create separate callback function please create inside forEach loop itself 
+  usersArray.forEach(function addNewProperty(obj){
+    // obj = A specific array element that is equal to specific object
+    Object.assign(obj,{gender:'male'})
+  })
+  console.log(usersArray)
+  
+  

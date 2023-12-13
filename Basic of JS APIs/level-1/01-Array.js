@@ -51,7 +51,9 @@ function forEachExample(arr){
   exampleArray.forEach(function(item,index){
     console.log(item,index);
   });
-}
+}    
+
+// In forEach() = there is a default parameter inside it like item == specific array element you can use any name instead of iem
 
 forEachExample(exampleArray);
 
