@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
     <title>Document</title>
+    <style>
+        div{
+            border: 2px solid white;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-<body>
+<body style="background-color: grey;">
     <h1>Using querySelecotorAll with multiple selector</h1>
     <p>change the background color of every p element where the parent is a div element</p>
     <div>
@@ -17,6 +23,10 @@
     <script>
         const nodeList = document.querySelectorAll("div > p") // div>p this will pick all p that is wrap up inside every div
         nodeList.forEach(item => item.style.backgroundColor = "green")
+
+        // If you only target first p that is wrap up inside top div
+        // const nodeList = document.querySelector('div>p')
+        // nodeList.style.backgroundColor="grey"
     </script>
 </body>
 </html>
