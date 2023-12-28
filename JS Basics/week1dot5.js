@@ -85,3 +85,6 @@ function vaibhavAsyncFun(){
   main();
   // but if you do other coding stuff outside the main method it work first after than async and await task execute like callback queue event loop concept
   console.log("Before asycn and await")
+
+
+

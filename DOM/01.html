@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form id="Loginform">
+        First name: <input type="text" name="fname" value="Harsh"><br/>
+        Last name: <input type="text" name="lname" value="Vardhan"><br/>
+        <input type="submit" value="Submit"> 
+    </form>
+    <p>Click the "Try it" button to display the number of elements in the form.</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="displayspace"></p>
+    <p class="intro">Hello World</p>
+    <p class="intro">This example demonstrated the <b>getElementByClassName</b> method</p>
+    <p id="demo">demo</p>
+</body>
+<script>
+    function myFunction(){
+        var x = document.getElementById('Loginform').elements.length; // this give you a length of three elements present in the form
+        var y = document.getElementById('Loginform').elements[0].value; // this give you a first element value inside form tag
+
+        // Below is the example of how to get the element data from and also how to set the content in the get html element 
+        document.getElementById('displayspace').innerHTML="Found "+x+" elements in the form."+" First name entered is: "+ y;
+
+        // How to create element using createElement() method 
+        const heading1 = document.createElement('h1')  // here h1 denote you creata a paragraph tag
+        heading1.innerText="This is a paragraph created via DOM"
+        document.body.appendChild(heading1)  // this line indicate step by step process = document -> body -> set new child that is para
+        
+        // getElementByClassName()
+        const a = document.getElementsByClassName('intro');
+        document.getElementById('demo').innerHTML='This first paragraph (index 0) with class = "intro" is: '+a[0].innerHTML
+        /* Finding the elements in the DOM :-
+        1. getElementId() = use when you are picking specific id and similar id
+        2. getElementbyTagname() = use when you are pick same multiple tag or single tag
+        3. getElementByClassName() = use when you are pick same multiple class or single class
+        */
+    }
+</script>
+</html>
