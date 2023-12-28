@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p>Finding HTML elements by Query Selectors</p>
+    <div>Div one</div>
+    <p class="intro">Paragraph one</p>
+    <div>Div two</div>
+    <p class="subheading">Paragraph two</p>
+    <div>Yet another div</div>
+    <div id="myDIV" style="border: 1px solid black;padding: 8px;">
+        <h2 class="example">A Heading</h2>
+        <p class="example">A Paragraph</p>
+        <p class="example">A Paragraph</p>
+    </div>
+    <h3 id="demo"></h3>
+    <script>
+        var paragraphs = document.querySelectorAll('p') // if type querySelecotorAll('p') it will select all p means paragraph and if you want that in only select specific p so type p.intro(element.idname/classname) when you use querySelectorAll and if you only querySelector() it only pick one element
+        paragraphs.forEach(item => item.style.backgroundColor="grey")  // it will change all p tag element backgroundcolor to grey
+        const element = document.getElementById('myDIV')
+        const list = element.querySelectorAll('.example') // .example give all element whose class is example
+        document.getElementById('demo').innerHTML="Total no. of elements in myDIV classs is: "+list.length
+
+        // You all pick multiple selector\
+        const multipleSelectors = document.querySelectorAll('p.intro, p.subheading')
+    </script>
+</body>
+</html>

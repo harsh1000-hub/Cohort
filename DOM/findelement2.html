@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Using querySelecotorAll with multiple selector</h1>
+    <p>change the background color of every p element where the parent is a div element</p>
+    <div>
+        <h3>H3 element</h3>
+        <p>I am a p element and my parent is a div element</p>
+    </div>
+    <div>
+        <h2>H2 element</h2>
+        <p>I am a p element and my parent is a div element</p>
+    </div>
+    <script>
+        const nodeList = document.querySelectorAll("div > p") // div>p this will pick all p that is wrap up inside every div
+        nodeList.forEach(item => item.style.backgroundColor = "green")
+    </script>
+</body>
+</html>
