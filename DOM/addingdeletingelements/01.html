@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDIV" style="border-style:double;background-color: grey;padding: 10px;">
+        <h3 id="demo">A heading</h3>
+    </div>
+    <script>
+        // create a element
+        const para =  document.createElement('p')
+        para.innerHTML = "A Paragraph"
+
+        // Append/put para element inside div element
+        document.getElementById('myDIV').appendChild(para);
+    </script>
+
+
+    <h3 id="temp">Remove me bro from remove() method</h3>
+    <button onclick="myFunction()">Remove</button>
+    <script>
+        function myFunction(){
+            const element = document.getElementById('temp')
+            element.remove();  
+            // And if you want to remove child from the parent element like below
+            /*
+              const parent = document.getElementId('myDIV')
+              const child = document.getElementId('demo')
+              parent.removeChild(child);  
+             */
+        }
+    </script>
+</body>
+</html>

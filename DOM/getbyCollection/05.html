@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        Using document.write()
+    </h3>
+    <p>Hey first</p>
+    <script>
+        document.write(Date()) // this line means that you put current date by calling date() method after Hey first
+    </script>
+    <p>Hey second</p>
+
+    <h3>
+        Change the img src using DOM
+    </h3>
+    <img id="pic" src="https://img.freepik.com/free-vector/mandala-design-background_79603-2152.jpg?w=900&t=st=1703848381~exp=1703848981~hmac=7109c989c0a25de2135237f3865a5dc08a154e3e55727839cad94166ae49df65" width="20%">
+    <h4>after changing the image src</h4>
+    <button onclick="myFunction()">Change the image</button>
+    <script>
+        function myFunction(){
+            document.getElementById('pic').src="https://img.freepik.com/free-vector/blue-copy-space-digital-background_23-2148821698.jpg?w=900&t=st=1703848558~exp=1703849158~hmac=07f888bbf8c54b363b053f0a70eeb139caf831d3f34cb1ce009e287c43075667"
+        }
+    </script>
+
+    <h3>Change the attribute and also set a value</h3>
+    <h2 id="demo">Hey change my text color !!!!</h2>
+    <input id="demo1" type="text" value="OK">
+    <br>
+    <button onclick="myFunction()">Change attribute</button>
+    <script>
+        function myFunction(){
+            document.getElementById('demo').setAttribute('style','color:red')
+            document.getElementById('demo1').setAttribute('type','button')
+        }
+    </script>
+</body>
+</html>
