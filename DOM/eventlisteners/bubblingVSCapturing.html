@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h3>Figure out Difference b/w Bubbling VS Capturing</h3>
+    <div id="myDIV1" style="border: 4px solid black;width: 50%;background-color: orange;">
+        <h2>Bubbling</h2>
+        <p id="myP1" style="background-color: white;padding: 10px;margin: 40px;">Click Me!!</p>
+    </div>
+    <br>
+    <div id="myDIV2" style="border: 4px solid black;width: 50%;background-color: orange;">
+        <h3>Capturing</h3>
+        <p id="myP2" style="background-color: white;padding: 10px;margin: 40px;">Click Me!!</p>
+    </div>
+    <script>
+        // bubbling code = means step by step event occur from top to bottom that's why we pass captuing as false and by default bubbling is true 
+        document.getElementById('myP1').addEventListener('click',function(){
+            alert("You clicked on white element")
+        },false)
+        document.getElementById('myDIV1').addEventListener('click',function(){
+            alert("You clicked on orange element")
+        },false)
+
+        // Capturing code = means botton to top event execute 
+        document.getElementById('myP2').addEventListener('click',function(){
+            alert("You clicked on white element")
+        },true)
+        document.getElementById('myDIV2').addEventListener('click',function(){
+            alert("You clicked on orange element")
+        },true)
+    </script>
+</body>
+</html>

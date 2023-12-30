@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h3>This example uses the addEventListener() method to execute a function when a user click on a button</h3>
+    <button id="myBtn">Try it</button>
+    <script>
+        // below code using addEventListener() advantage of below code first event after that in same loop second event also execute
+        document.getElementById('myBtn').addEventListener('click',myFunction) // pass click as a onClick method
+        document.getElementById('myBtn').addEventListener('click',myFunction1);
+      
+        // below code is without addEventListener() disadvantage of below code is that it overwrite the first event with second event means first event never execute
+        // document.getElementById('myBtn').onclick=myFunction
+        // document.getElementById('myBtn').onclick=myFunction1
+        function myFunction(){
+            alert("Hello World")
+        }
+        function myFunction1(){
+            alert("Second Hello world")
+        }
+
+        // above code represent multiple event listener
+    </script>
+</body>
+</html>

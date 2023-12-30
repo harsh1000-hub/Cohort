@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3>The onmousedown Attribute</h3>
+    <!-- onmousedown = means when you click on div -->
+    <!-- onmouseup = means when you release after click on div-->
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+    style="background-color: yellow;padding:40px;width: 120px;height: 20px;">
+    Release Me
+    <script>
+        function mDown(obj){
+            obj.style.backgroundColor="grey"
+            obj.innerHTML="Thank you"
+        }
+        function mUp(obj){
+            obj.style.backgroundColor="yellow"
+            obj.innerHTML="Release Me"
+        }
+    </script>
+</body>
+</html>

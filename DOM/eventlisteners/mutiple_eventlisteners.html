@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h3>Apply addEventListener() method to add many events on the same button</h3>
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+    <script>
+        var x = document.getElementById('myBtn') // get the referrence of button with id = demo
+        x.addEventListener('mouseover',function(){
+            document.getElementById('demo').innerHTML="Mouse over"
+        })
+        x.addEventListener('click',function(){
+            document.getElementById('demo').innerHTML="Clicked"
+        })
+        x.addEventListener('mouseout',function(){
+            document.getElementById('demo').innerHTML="Mouse out"
+        })
+    </script>
+</body>
+</html>

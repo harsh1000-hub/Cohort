@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h3>The onmouseover attribute</h3>
+    <!-- onmouseover = hover on div -->
+    <!-- onmouseout = release after hover on div -->
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+    style="background-color: yellow;padding:40px;width: 120px;height: 20px;">
+    Mouse Over me
+    </div>
+    <script>
+        function mOver(obj){
+            obj.style.backgroundColor="red"
+        }
+        function mOut(obj){
+            obj.style.backgroundColor="yellow"
+        }
+    </script>
+</body>
+</html>

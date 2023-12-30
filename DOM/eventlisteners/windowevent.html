@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <h3>This addEventListener() method on the window object</h3>
+    <p id="demo"></p>
+    <script>
+        window.addEventListener('resize',function(){
+            document.getElementById('demo').innerHTML=Math.random(); // this line means when you resize you web page some random put on paragraph with on every resize event occur
+        })
+    </script>
+</body>
+</html>
