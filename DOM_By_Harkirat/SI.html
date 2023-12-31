@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+</head>
+<body>
+    <h2 style="text-align: center;">Simple Interest Calculator</h2> <br><br>
+    <div style="background-color: orange; padding: 20px; width: 300px; margin: 0 auto;">
+        <input id="P" type="text" placeholder="Principal">
+        <br><br>
+        <input id="R" type="text" placeholder="Rate">
+        <br><br>
+        <input id="T" type="text" placeholder="Time">
+        <br><br>
+        <button onclick="myFunction()">Calculate SI</button>
+        <br><br>
+        <input type="text" id="SI" placeholder="Result">
+        <br>
+        <h3>Total Value after Interest</h3>
+        <input type="text" id="total" placeholder="Total Value after Interest">
+    </div>
+
+    <script>
+        function myFunction() {
+            const p = document.getElementById('P').value;
+            const r = document.getElementById('R').value;
+            const t = document.getElementById('T').value;
+            const ans = (p * r * t) / 100;
+            document.getElementById('SI').value = "Rs "+ans;
+            document.getElementById('total').value = "Rs "+ (parseInt(ans) + parseInt(p));
+        }
+    </script>
+</body>
+</html>
