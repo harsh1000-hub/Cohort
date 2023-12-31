@@ -3,7 +3,8 @@
 <head>
     <title>Calculate Sum</title>
 </head>
-<body>
+<body> 
+    <!-- onChange() or onInput() = that you can use without button Calculate Sum -->
     <input id="num1" type="text" placeholder="Type a number">
     <br><br>
     <input id="num2" type="text" placeholder="Type a number">
@@ -11,13 +12,36 @@
     <button onclick="mySum()">Calculate Sum</button>
     <br><br>
     <input id="demo" type="text" placeholder="Result">
+
     <script>
         function mySum(){
-            let firstNum = Number(document.getElementById('num1').value);
-            let secondNum = Number(document.getElementById('num2').value);
-            let sum = firstNum+secondNum
-            document.getElementById('demo').value = "Sum is = " +sum;
+            const a  = document.getElementById('num1').value;
+            const b = document.getElementById('num2').value;
+            const sum = parseInt(a)+parseInt(b);
+            document.getElementById('demo').value = sum;
+
+           /* Using backend server created by harkirat bhaiya to hit the server that server contain log of sum of  two number
+            fetch() is async function
+            fetch("https://sum-server.100xdevs.com/sum?a="+a+"&b="+b).then(function(response){
+                   response.text() = you know that server give a text type data
+                response.text().then(function(ans){   // here response.text() = is also a async call
+                    document.getElementById('demo').value=ans
+                })
+            })
+            */
+
+            /* You can also do same above task in more cleaner way using async await
+            async function mySum(){
+                const a  = document.getElementById('num1').value;
+                const b = document.getElementById('num2').value;
+                const response = await fetch("https://sum-server.100xdevs.com/sum?a="+a+"&b="+b);
+                const ans = await response.text();
+                document.getElementById('demo').value=ans
+            }
+            */
         }
     </script>
 </body>
 </html>
+
+<!-- 1:25:07 = connects frontend Calculate Sum to backend server -->
