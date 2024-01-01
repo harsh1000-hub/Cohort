@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Change Case</title>
+</head>
+<body style="background-color: grey;background-color: wheat;">
+    <div style="text-align: center;font-size: 30px;background-color: blueviolet;color: white;padding: 5px;border-radius: 30px;margin-left: 600px;margin-right: 600px;">Convert Case App</div>
+    <br><br><br><br>
+    <div style="background-color: lightslategray; padding: 20px; width: 500px; height: 300px; margin: 0 auto;border-radius: 30px;">
+        <input id="BText" type="text" style="height: 100px;width:500px;text-align:center;border-radius: 30px;border-color: darkslategrey;font-weight: bold;" placeholder="Write a Text">
+        <br><br>
+        <button style="background-color: greenyellow;padding: 10px;font-weight:bold;cursor: pointer;" onclick="myFunction()">Convert Text</button>
+        <br><br>
+        <input id="AText" type="text" style="height: 100px;width:500px;text-align: center;border-radius: 30px;border-color: darkslategrey;font-weight: bold;" placeholder="Result">
+    </div>
+    <script>
+        function myFunction(){
+            let beforeText = document.getElementById('BText').value;
+            // split on the basis of empty string
+            let charArray = beforeText.split('')  
+            // map each character and check input character is uppercase or lowercase
+            let convertedArray = charArray.map(char => {
+                return char===char.toLowerCase() ? char.toUpperCase():char.toLowerCase();
+            })
+            // now join the convertedArray so that array will become string
+            let convertedString = convertedArray.join('')
+            document.getElementById('AText').value=convertedString
+        }
+    </script>
+</body>
+</html>
