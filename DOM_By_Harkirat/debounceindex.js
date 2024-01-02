@@ -7,6 +7,7 @@ const getData = () => {
 }
 
 // How to Optimize the getData() API function means to decrease the unnecessary API calls answer is = debouncing
+// deboucing means call getData() when difference between two keys press is greater than 300 ms time
 // creata a debounce method 
 const debounceMethod = (fn,delay) =>{
     let timer;
