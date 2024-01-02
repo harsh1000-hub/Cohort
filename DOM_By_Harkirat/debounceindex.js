@@ -15,7 +15,7 @@ const debounceMethod = (fn,delay) =>{
         // let context = this,
         // args = arguments
         clearTimeout(timer) // clearTimeout so that copy will not create for setTimeout
-        // why clear the setTimeout because in that 300ms if we more than one call of getData() so than start a new call on getData() otherwise debounce not work properly and unnecessary API call happened
+        // why clear the setTimeout because in that 300ms if we more call of getData() again so than start a new call on getData() otherwise debounce not work properly and unnecessary API call happened
         timer = setTimeout(() =>{
             fn() // callback function trigger the getData() method
         },delay)
