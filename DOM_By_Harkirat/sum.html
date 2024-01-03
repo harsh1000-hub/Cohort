@@ -21,8 +21,14 @@
             document.getElementById('demo').value = sum;
 
            /* Using backend server created by harkirat bhaiya to hit the server that server contain log of sum of  two number
-            fetch() is async function
-            fetch("https://sum-server.100xdevs.com/sum?a="+a+"&b="+b).then(function(response){
+           // axios library = which give you more clear syntax to write fetch 
+           // const repsonse = await axios.get("https://sum-server.100xdevs.com/sum?a="+a+"&b="+b) 
+           // response.data  => give you the data from the sum-server backend
+           
+           fetch() is async function
+            fetch("https://sum-server.100xdevs.com/sum?a="+a+"&b="+b,{
+                method="POST" // give post request to the backend
+            }).then(function(response){
                    response.text() = you know that server give a text type data
                 response.text().then(function(ans){   // here response.text() = is also a async call
                     document.getElementById('demo').value=ans
