@@ -6,8 +6,8 @@
 <script>
     let globalId = 1;
     function markAsDone(todoId){
-        const parent = document.getElementById(todoId)
-        parent.children[2].innerHTML="Done"
+        const parent = document.getElementById(todoId)  // here parent is child in createChild() method 
+        parent.children[2].innerHTML="Done" // children[2] == button in createChild() method
     }
     function createChild(title,description,id){
         const child = document.createElement('div') // create a first child inside parent div id='container'
@@ -27,6 +27,8 @@
     function addTodo(){
         const title = document.getElementById('title').value;
         const description = document.getElementById('description').value;
+
+        // ====================================================================================
         // ugly way to add todo
         // const originalString = document.getElementById('container').innerHTML
         // add todo
@@ -36,11 +38,11 @@
         //     <div>${description}</div>
         //     <button>Mark as done</button>
         //     </div>`
-        
+        // =====================================================================================
 
         // using some more advance dom method to create a add todo functionality
         const parent = document.getElementById('container')
-        parent.appendChild(createChild(title,description,globalId++));
+        parent.appendChild(createChild(title,description,globalId++));  // this basically create a three child inside parent div
     }
 </script>
 <body>
