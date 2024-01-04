@@ -1,0 +1,3 @@
+// Week 4.2 :-
+1. First create a todo app using dom in ugly way
+2. Second create a todo app using dom using more advance dom method
