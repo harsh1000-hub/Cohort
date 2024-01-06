@@ -16,4 +16,28 @@ b. A function that takes state/props as an input return out some html on to the 
 3. Re-rendering = It takes a current state and according to backend logic it changes the state from old state to new state or you can figure out the difference b/w old state and new state.
 
 -------------------------------------------------------------------------------
- 
+
+4. JSX = Javascript XML
+-------------------------------------------------------------------------------
+
+5.npm run build = create a dist folder inside your project and take your React code convert into html,Javascript file and you can use that dist file anywhere to run react app
+
+-------------------------------------------------------------------------------
+
+6. In react Component when you write JSX and inside JSX scope you want to code with Javascript so write any Javascript code insidet curly bracket{} this is a rule in react 
+
+-------------------------------------------------------------------------------
+
+7. Always in react when you declare a intial state of a Component try to use conventinal way in react to create state means use hook one them are useState()
+ex:- [count,setCount] = useState(0)  // this line right now count = 0 and setCount method is used to update the count state
+
+-------------------------------------------------------------------------------
+
+8. Naming conventions in react:-
+   a. When create a function name it will started from Uppercase like function App()
+   b. when you use Component it's name should be starting from Uppercase like <Buttton></Buttton>
+   c. Always write Javascript inside curly braces {} in react
+   d. Always note that you write JSX(js xml)
+
+-------------------------------------------------------------------------------
+
