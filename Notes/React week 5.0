@@ -1,0 +1,19 @@
+Component , state , re-rendering  -> three imp thing in React
+
+====================================================================================
+
+1. state = anything that changes on the website like counter in index.html file and means a very big objects
+Note:- In React to maintain the state that is important
+
+-------------------------------------------------------------------------------
+
+2. Component:-
+a. for example button is a Component from index.html which takes a state of 0 means counter=0 and re-rendering accordingly
+b. A function that takes state/props as an input return out some html on to the webpage is called Component and you can reuse Component anywhere in the code
+
+-------------------------------------------------------------------------------
+
+3. Re-rendering = It takes a current state and according to backend logic it changes the state from old state to new state or you can figure out the difference b/w old state and new state.
+
+-------------------------------------------------------------------------------
+ 
