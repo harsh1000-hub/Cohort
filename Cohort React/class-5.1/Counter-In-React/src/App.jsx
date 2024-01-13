@@ -52,7 +52,17 @@ function App() {
   }
   return (
     <div>
-      <button onClick={addTodo}>Add a Todo</button>
+      <button
+        onClick={addTodo}
+        style={{
+          backgroundColor: "grey",
+          color: "white",
+          padding: "10px",
+          cursor: "pointer",
+        }}
+      >
+        Add a Todo
+      </button>
       {todos.map(function (todo) {
         return (
           <Todo
