@@ -1,3 +1,14 @@
 // React 5.1 form cohort
 
 1. How to validate props by using props library in React
+2. Any time parent re-render its child also re-render and in that condition also when child component do have take any input state .
+3. React only focus on state variable rather noraml variable at the time of re-redering
+4. If you want to write javascript code inside JSX so use curly braces {} for that means inside curly braces write your JS code.
+5. If you write CSS inside JSX so use double curly braces {{}} for that means inside double curly braces write your CSS code. 
+For ex:-  style={{
+          backgroundColor: "grey",
+          color: "white",
+          padding: "10px",
+          cursor: "pointer",
+        }}
+
